@@ -13,7 +13,11 @@ This projects implements a sample application using the following technologies:
 We use Microsoft Visual Studio Code as the development plattform.
 
 The **server** side code is implemented twice, once with C# (.NET Core) and once with TypeScript (Node.js).
-The reason for this is a proof of concept.
+The reason for this is a proof of concept. We would like to proof:
+
+- can we have the same principles for C# and Node.Js components?
+- how about business logic, how about integration (databases, etc.)?
+- how does this feel ;-) ?
 
 We will use DDD (Domain Driven Design) principles.
 
@@ -26,3 +30,27 @@ The goal is to only implement the GUI once and deploy the 'same' source files to
 ##Help needed
 
 If you are intressted in helping out, please leave a message. Thank you!
+
+#generall
+
+- install Microsoft Visual Code
+- install .Net Core (http://dotnet.github.io/getting-started/)
+- install Node.js (https://nodejs.org/en/)
+
+#dotnetcore
+
+- compile 
+  - cd DevxSample\src\server\dotnetcore\ErpDomain
+  - dotnet restore
+  - dotnet build
+- test:
+  - dotnet run
+
+#nodejs
+
+- prepare:
+  - cd DevxSample
+  - npm install
+- test: 
+  - cd DevxSample\src\server\nodejs\ErpDomain\CustomerModule\CustomerAggregate
+  - node Customer.js

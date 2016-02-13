@@ -6,11 +6,14 @@ module DevxSample.ErpDomain.CustomerModule.CustomerAggregate {
         /**
          * @param firstname The first name of the customer.
          */
-        constructor(firstname: string)
+        constructor(public firstName: string)
         {
             
         }
+        
+        public customerPkId: number;
     }
-    
-    var x = new Customer('Harry')
 }
+    
+var customer = new DevxSample.ErpDomain.CustomerModule.CustomerAggregate.Customer('Harry')
+console.log(customer.firstName);
