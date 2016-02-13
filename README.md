@@ -52,5 +52,5 @@ If you are intressted in helping out, please leave a message. Thank you!
   - cd DevxSample
   - npm install
 - test: 
-  - cd DevxSample\src\server\nodejs\ErpDomain\CustomerModule\CustomerAggregate
+  - cd src\server\nodejs\ErpDomain\CustomerModule\CustomerAggregate
   - node Customer.js
