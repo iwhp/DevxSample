@@ -1,0 +1,23 @@
+{
+  "name": "devxsample",
+  "version": "1.0.0",
+  "description": "Devx Sample application.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^1.9.0-dev.20160213"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwhp/DevxSample.git"
+  },
+  "author": "Harry Pfleger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwhp/DevxSample/issues"
+  },
+  "homepage": "https://github.com/iwhp/DevxSample#readme"
+}
