@@ -10,7 +10,7 @@ This project implements a sample application (based on an ERP system) using the 
   * Mobile (Cordova)
   * Desktop (Windows, Mac, Linux - using Electron)
 
-This project also contains a side project called **devxgen** (found in folder `.devxgen`). Sooner or later
+This project also contains a side project called **devxbase** (found in folder `.devxbase`). Sooner or later
 we will extract this and put it into its one repository. This side project has the gool to provide a 
 code generator for DEVX-based applications. 
 
