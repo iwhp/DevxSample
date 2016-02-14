@@ -32,12 +32,12 @@ gulp.task('clean', ['clean-devxbase', 'clean-devxbase-test'], function () {
 });
 
 gulp.task('clean-devxbase', function () {
-	return gulp.src('.devxbase/build/**/*.js', {read: false})
+	return gulp.src('.devxbase/src/**/*.js', {read: false})
 		.pipe(clean());
 });
 
 gulp.task('clean-devxbase-test', function () {
-	return gulp.src('.devxbase/buildtest/**/*.js', {read: false})
+	return gulp.src('.devxbase/test/**/*.js', {read: false})
 		.pipe(clean());
 });
 
@@ -53,7 +53,7 @@ gulp.task('compile-devxbase', ['clean-devxbase'], function() {
     // Merge the two output streams, so this task is finished when the IO of both operations are done. 
     return merge([
         //tsResult.dts.pipe(gulp.dest('.devxbase/build')),
-        tsResult.js.pipe(gulp.dest('.devxbase/build'))
+        tsResult.js.pipe(gulp.dest('.devxbase/src'))
     ]);
 });
 
@@ -63,7 +63,7 @@ gulp.task('compile-devxbase-test', ['clean-devxbase-test'], function() {
         
     // Merge the two output streams, so this task is finished when the IO of both operations are done. 
     return merge([
-        tsResult.js.pipe(gulp.dest('.devxbase/buildtest'))
+        tsResult.js.pipe(gulp.dest('.devxbase/test'))
     ]);
 });
 
@@ -79,7 +79,7 @@ gulp.task('compile-devxbase-test', ['clean-devxbase-test'], function() {
 // ---
 
 gulp.task('mocha', ['compile'],  function() {
-    return gulp.src('./.devxbase/buildtest/*.js', { read: false })
+    return gulp.src('./.devxbase/test/*.js', { read: false })
         // glup-mocha needs filepaths, so you can't have any plugins before it
         .pipe(mocha({ reporter: 'spec' }))
         .on('error', handleError)
@@ -101,6 +101,6 @@ gulp.task('watch', ['compile-ts'], function () {
 
 gulp.task('test', [], function(){
     console.log('Testing...');
-    var mainTest = require('./.devxbase/build/mainTest.js');
+    var mainTest = require('./.devxbase/test/mainTest.js');
     console.log(mainTest);
 });

@@ -1,125 +1,125 @@
 {
-    "name": "DEVX SAMPLE (ERP)",
+    "name": "DEVX S77AMPLE (ERP)",
     "description": "Devx Sample application.",
     "version": "0.0.1",
     "entities": {
         "group": "CustomerModule",
-        "items": {
+        "items": [{
             "group": "CustomerAggregate",
-            "items": {
-                "entity": "Customer"
-            }
-        }
+            "items": [{
+                "name": "Customer"
+            }]
+        }]
     },
-    "projects": {
-        "applicationService": { "name": "ErpApplication" },
-        "domainEntity": { "name": "ErpDomain" },
-        "domainSpecification":  { "name": "ErpDomain" },
-        "domainValidation":  { "name": "ErpDomain" },
-        "domainServiceInterface":  { "name": "ErpDomain" },
-        "domainServiceImplementation":  { "name": "ErpDomain" },
-        "repositoryInterface":  { "name": "ErpDomain" },
-        "repositoryImplementation":  { "name": "ErpInfrastructure" }
-    },
-    "templates": {
+    "modules": [
+        { "key": "applicationService",  "name": "ErpApplication" },
+        { "key": "domainEntity",  "name": "ErpDomain" },
+        { "key": "domainSpecification", "name": "ErpDomain" },
+        { "key": "domainValidation", "name": "ErpDomain" },
+        { "key": "domainServiceInterface", "name": "ErpDomain" },
+        { "key": "domainServiceImplementation", "name": "ErpDomain" },
+        { "key": "repositoryInterface", "name": "ErpDomain" },
+        { "key": "repositoryImplementation", "name": "ErpInfrastructure" }
+    ],
+    "moduleTemplate": {
         "suffixLast": ".designer",
-        "applicationService": {
-            "target1": {
+        "templates": [{ "key": "applicationService",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/applicationService.cs",
                 "generateGroup": false,
                 "suffix": "Service"
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/applicationService.ts",
                 "generateGroup": false,
                 "suffix": "Service"
-            }
+            }]
         },
-         "domainEntity": {
-            "target1": {
+        { "key": "domainEntity",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/domainEntity.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/domainEntity.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "domainSpecification": {
-            "target1": {
+        { "key": "domainSpecification",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/domainSpecification.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/domainSpecification.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "domainValidation": {
-            "target1": {
+        { "key": "domainValidation",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/domainValidation.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/domainValidation.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "domainServiceInterface": {
-            "target1": {
+        { "key": "domainServiceInterface",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/domainServiceInterface.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/domainServiceInterface.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "domainServiceImplementation": {
-            "target1": {
+        { "key": "domainServiceImplementation",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/domainServiceImplementation.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/domainServiceImplementation.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "repositoryInterface": {
-            "target1": {
+        { "key": "repositoryInterface",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/repositoryInterface.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/repositoryInterface.ts",
                 "generateGroup": true
-            }
+            }]
         },
-        "repositoryImplementation": {
-            "target1": {
+        { "key": "repositoryImplementation",
+            "targets": [{
                 "outDir": "./src/server/dotnetcore/{{projectName}}",
                 "template": "./devxgen/templates/base/repositoryImplementation.cs",
                 "generateGroup": true
             },
-            "target2": {
+            {
                 "outDir": "./src/server/nodejs/{{projectName}}",
                 "template": "./devxgen/templates/base/repositoryImplementation.ts",
                 "generateGroup": true
-            }
-        }
+            }]
+        }]
     }
 }

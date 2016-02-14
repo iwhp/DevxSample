@@ -1,22 +1,12 @@
-/**
- * Entry point for DevxBase.
- */
-/*
-export class DevxBase {
-    private configFile: string = '../devx.json';
+/// <reference path="../../typings/main/ambient/node/node.d.ts" />
 
-    constrcutor(configFile: string = '../devx.json'){
-        if (configFile !== null) {
-            this.configFile = configFile;
-        }
-    }
+import Main = require('./Main');
 
-    public sayHello(){
-        console.log('Hello from DevxBase.');
-        console.log(this.configFile);
+var main: Main = null;
+
+export function getMain(): Main {
+    if (main === null) {
+        main = new Main();
     }
-}    
-*/
-export function sayHello(): void { 
-        console.log('Hello from DevxBase.');
+    return main;
 }

@@ -1,10 +1,12 @@
 /// <reference path="../../typings/main/ambient/node/node.d.ts" />
 /// <reference path="../../typings/main/ambient/mocha/mocha.d.ts" />
 /// <reference path="../../typings/main/ambient/chai/chai.d.ts" />
+/// <reference path="../src/Main.ts" />
 
 import chai = require('chai');
-import devxBase = require('../build/DevxBase');
-console.log(devxBase);
+import devxBase = require('../src/DevxBase');
+var main = devxBase.getMain();
+main.init();
 
 var expect = chai.expect;
 
@@ -14,7 +16,7 @@ describe('Testing DevxBase app', () => {
 		//DevxBase.say..init(['Awesome', 'Ok', 'Bad']);
 	});
 
-	it('should be able to get votes', () => {
+	it('should be able to ???', () => {
 		// Act
 		//var result = devxBase.sayHello();
 
