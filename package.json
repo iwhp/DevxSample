@@ -5,7 +5,16 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "typescript": "^1.9.0-dev.20160213"
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-typescript": "^2.11.0",
+    "merge2": "^1.0.1",
+    "tslint": "^3.3.0",
+    "tslint-microsoft-contrib": "^2.0.1",
+    "typescript": "^1.9.0-dev.20160213",
+    "typings": "^0.6.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

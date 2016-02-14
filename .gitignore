@@ -1,4 +1,7 @@
 node_modules/**/*
-src/**/bin/**/*
-src/**/obj/**/*
-src/**/*.js
+typings/**/*
+/**/src/**/bin/**/*
+/**/src/**/build/**/*
+/**/src/**/obj/**/*
+/**/build/**/*.js
+/**/src/**/*.js
