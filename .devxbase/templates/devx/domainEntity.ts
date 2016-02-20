@@ -1,1 +1,0 @@
-// domainEntity.ts

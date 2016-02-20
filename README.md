@@ -10,39 +10,8 @@ This project implements a sample application (based on an ERP system) using the 
   * Mobile (Cordova)
   * Desktop (Windows, Mac, Linux - using Electron)
 
-This project also contains a side project called **devxbase** (found in folder `.devxbase`). Sooner or later
-we will extract this and put it into its one repository. This side project has the gool to provide a 
-code generator for DEVX-based applications. 
-
-##Our Plan
-
-We use Microsoft Visual Studio Code as the development plattform.
-
-The **server** side code is implemented twice, once with C# (.NET Core) and once with TypeScript (Node.js).
-The reason for this is a proof of concept. We would like to proof:
-
-* can we have the same principles for C# and Node.Js components?
-* how about business logic, how about integration (databases, etc.)?
-* how does this feel ;-) ?
-
-We will use DDD (Domain Driven Design) principles.
-
-As the data store we will use MS Sql, MySql, MonoDb.
-
-The **client** side code is implemented with HTML, CSS and TypeScript.
-We use different technologies to have the application running in the browser, on mobile devices 
-(Android, IOS and Windows) and on desktops (Linux, Mac OSX and Windows).
-The goal is to only implement the GUI once and deploy the 'same' source files to the different environments.
-
-##Help needed
-
-If you are intressted in helping out, please leave a message. Thank you!
-
-#generall
-
-* install Microsoft Visual Code
-* install .Net Core (http://dotnet.github.io/getting-started/)
-* install Node.js (https://nodejs.org/en/)
+We will use DevxBase to generate the code. We will have extention points where we implement logic
+not covered by the generator.
 
 #dotnetcore
 

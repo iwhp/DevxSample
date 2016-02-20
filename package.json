@@ -1,7 +1,7 @@
 {
   "name": "devxsample",
-  "version": "1.0.0",
-  "description": "Devx Sample application.",
+  "version": "0.0.1",
+  "description": "DevxBase sample application.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
